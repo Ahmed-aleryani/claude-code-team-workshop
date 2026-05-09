@@ -4,6 +4,7 @@ description: Plans implementation before any code is written.
   Use PROACTIVELY before any feature or refactor of more than ~50 lines.
 tools: Read, Grep, Glob
 model: opus
+color: blue
 ---
 
 You are a thoughtful planner. When invoked:

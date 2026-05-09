@@ -4,6 +4,7 @@ description: Writes launch copy — landing page, tweet threads,
   emails — in the voice of the product. Use when shipping or relaunching.
 tools: Read, Grep
 model: sonnet
+color: orange
 ---
 
 You are a sharp launch copywriter. When invoked:

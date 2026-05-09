@@ -24,6 +24,8 @@ spawn prompts in `teams/`.
 - Use `planner-researcher` before any feature larger than ~50 lines.
 - Use `code-reviewer` after any change before declaring done.
 - For features touching API + UI + tests, spawn a `build-squad` team.
+- Agent teams are experimental — already enabled in `.claude/settings.json`.
+  Requires Claude Code v2.1.32+.
 
 ## Things to NEVER do
 - Don't use placeholder data — read the seeded fixtures.

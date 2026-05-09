@@ -4,6 +4,13 @@ A ready-to-run folder for the "Build a Team With Claude Code" workshop.
 The three subagents from the slides are pre-installed in `.claude/agents/`,
 and the three starter-team spawn prompts live in `teams/`.
 
+## Prerequisites
+
+- Claude Code **v2.1.32 or newer** (`claude --version`). Agent teams require it.
+- Agent teams are an **experimental** feature. This folder's
+  `.claude/settings.json` already turns them on for you via
+  `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` — you don't need to do anything.
+
 ## Quick start
 
 ```bash
@@ -11,7 +18,9 @@ cd demo
 claude
 ```
 
-That's it — the subagents are auto-discovered.
+That's it — the subagents are auto-discovered, the experimental
+teams flag is on, and a sensible permissions allowlist is in place
+so common operations don't prompt every time.
 
 ## What's inside
 
@@ -51,7 +60,12 @@ Open a team prompt and paste it into Claude, or just point at the file:
 ```
 
 The lead agent will fan out to teammates and coordinate via the shared task
-list at `~/.claude/tasks/{team-name}/`.
+list at `~/.claude/tasks/{team-name}/` and team config at
+`~/.claude/teams/{team-name}/config.json`.
+
+> Heads up: agent teams are experimental. Known limitations include
+> session resumption (teammates disappear on `/resume`) and occasional
+> task-status lag. If a run gets stuck, kill the session and respawn.
 
 ## Decision rule
 
